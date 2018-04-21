@@ -1,2 +1,542 @@
 
 @import "ember-cli-bootstrap-4/bootstrap";
+@import "components/global";
+
+/*
+===============================================================================
+                              MAIN HEADER SECTION
+===============================================================================
+*/
+
+.index-header {
+  h1 {
+    padding-left: 15px;
+    padding-right: 15px;
+    @include media-breakpoint-up(md) {
+      padding-left: 100px;
+      padding-right: 100px;
+      margin-top: 5%;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 60px;
+    }
+  }
+  h4 {
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include media-breakpoint-up(md) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 60px;
+      padding-left: 125px;
+      padding-right: 125px;
+    }
+  }
+}
+
+/*
+===============================================================================
+                              MAIN SERVICES SECTION
+===============================================================================
+*/
+
+.index-services {
+  &__container {
+    margin-top: 50px;
+    height: 68.688rem;
+    background-color: #f1f2f2;
+    @include media-breakpoint-only(sm) {
+      height: auto;
+      padding-bottom: 50px;
+    }
+  }
+  &__capheader {
+    padding-top: 70px;
+    h3 {
+      color: #788d39;
+      font-family: Antonio;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: center;
+      margin-top: 10px;
+      @include media-breakpoint-up(md) {
+        font-size: 2rem;
+        margin-top: 5px;
+        text-align: right;
+      }
+    }
+    h4 {
+      text-align: center;
+      margin-top: 8px;
+      @include media-breakpoint-up(md) {
+        margin-left: -30%;
+        text-align: left;
+      }
+      @include mobileland {
+        text-align: center;
+        margin-left: 0px;
+      }
+    }
+    .col-sm-2 {
+      @include media-breakpoint-only(sm) {
+        width: 1%;
+        padding-left: 5px;
+      }
+      .divider-bar {
+        width: 0.188rem;
+        height: 3.375rem;
+        background-color: #b1aea0;
+        @include mobileland {
+          display: none;
+        }
+      }
+    }
+  }
+  //   Services Section
+  &__servicesrow {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 70px;
+    .col-md-4 {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .outer-box {
+      height: 23.063rem;
+      border: 0.063rem solid #b1aea0;
+      .row {
+        margin: 0;
+      }
+    } // BRANDING TEXT COLUMN
+    .branding-text {
+      text-align: center;
+      img {
+        margin-top: 30px;
+        @include media-breakpoint-only(md) {
+          margin-top: 30px;
+        }
+        @include media-breakpoint-up(lg) {
+          margin-top: 20px;
+        }
+      }
+      h2 {
+        padding-top: 25px;
+        @include media-breakpoint-only(md) {
+          padding-top: 18px;
+        }
+        @include media-breakpoint-up(lg) {
+          padding-top: 30px;
+        }
+        color: #b8b760;
+      }
+      p {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        @include mobileland {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        @include media-breakpoint-up(lg) {
+          padding-left: 50px;
+          padding-right: 50px;
+        }
+      }
+      ul {
+        margin-bottom: 0px;
+        margin-left: 0px;
+        padding: 0;
+      }
+      li {
+        @include media-breakpoint-up(lg) {
+          font-size: 0.938rem;
+          line-height: 1.375rem;
+        }
+        font-family: "Source Sans Pro";
+        font-size : 0.8rem;
+        line-height: 1.3rem;
+      }
+    } // WEB DEVELOPMENT TEXT COLUMN    
+    .webdevelop-text {
+      @extend .branding-text;
+      img {
+        margin-top: 23px;
+      }
+      h2 {
+        padding-top: 20px;
+        color: #60b89e;
+        @include tablet {
+          font-size: 29px;
+        }
+      }
+    } // PHOTO TEXT COLUMN
+    .photo-text {
+      @extend .branding-text;
+      img {
+        margin-top: 30px;
+      }
+      h2 {
+        padding-top: 26px;
+        color: #6699ae;
+      }
+      p {
+        padding-left: 15px;
+        padding-right: 15px;
+        @include media-breakpoint-up(lg) {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+      }
+    } // MARKETING TEXT COLUMN
+    .marketing-text {
+      @extend .branding-text;
+      h2 {
+        color: #b88760;
+        padding-top: 14px;
+      }
+    } // PRINTING TEXT COLUMN
+    .printing-text {
+      @extend .branding-text;
+      h2 {
+        color: #806e65;
+        padding-top: 17px;
+      }
+      p {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        @include media-breakpoint-up(md) {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        @include mobileland {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    } // STRATEGY TEXT COLUMN
+    .strategy-text {
+      @extend .branding-text;
+      h2 {
+        color: #857e83;
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+/*
+===============================================================================
+                              FEATURED WORK SECTION
+===============================================================================
+*/
+
+.index-featured {
+  &__bg {
+    background-image: url(/assets/tree_bg.png);
+    margin-top: -192px;
+    background-size: cover;
+    background-position: 50% 50%;
+    @include media-breakpoint-up(md) {
+      margin-top: -220px;
+      position: relative;
+      z-index: 100;
+    }
+    @include mobileland {
+      margin-top: -200px;
+    }
+  }
+  &__header {
+    padding-top: 250px;
+    .col-md-5 {
+      h3 {
+        color: #788d39;
+        font-family: Antonio;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 10px;
+        @include media-breakpoint-up(md) {
+          font-size: 2rem;
+          margin-top: 5px;
+          text-align: right;
+        }
+        @include mobileland {
+          text-align: center;
+        }
+      }
+      @include mobileland {
+        width: 100%;
+      }
+    }
+    .col-sm-2 {
+      @include media-breakpoint-only(sm) {
+        width: 1%;
+        padding-left: 5px;
+      }
+    }
+    .divider-bar {
+      width: 0.188rem;
+      height: 3.375rem;
+      background-color: #b1aea0;
+      @include mobileland {
+        display: none;
+      }
+    }
+    .col-md-5 {
+      h4 {
+        text-align: center;
+        margin-top: 8px;
+        @include media-breakpoint-up(md) {
+          margin-left: -40%;
+          text-align: left;
+        }
+        @include mobileland {
+          margin-left: 0px;
+          text-align: center;
+        }
+      }
+    }
+  } // END FEATURED HEADER
+  // TNA FEATURED SECTION
+  &__tnafitness {
+    .col-md-9 {
+      padding-left: 0px;
+      padding-right: 0px;
+      @include media-breakpoint-only(md) {
+        margin-top: 60px;
+        width: 65%;
+      }
+    }
+    .col-md-3 {
+      margin-top: 140px;
+      @include media-breakpoint-only(md) {
+        width: 35%;
+        position: relative;
+        left: 50px;
+      }
+      @include media-breakpoint-up(lg) {
+        position: relative;
+        left: 100px;
+      }
+      h5 {
+        text-align: center;
+        margin-bottom: 0px;
+      }
+      h6 {
+        text-align: center;
+        margin-bottom: 10px;
+        @include media-breakpoint-only(md) {
+          margin-bottom: 0px;
+        }
+      }
+      p {
+        color: #2a2a2a;
+        font-family: "Source Sans Pro";
+        font-size: 0.875rem;
+        line-height: 1rem;
+        //         text-align: center;
+        //         padding-left: 30px;
+        //         padding-right: 30px;
+        margin-bottom: 10px;
+        @include media-breakpoint-only(md) {
+          font-size: 0.7rem;
+          margin-top: 30px;
+        }
+        @include media-breakpoint-only(md) {
+          text-align: left;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+      }
+      ul {
+        padding-left: 0;
+      }
+      li {
+        font-family: "Source Sans Pro";
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding-left: 40px;
+        padding-right: 40px;
+        @include media-breakpoint-only(md) {
+          font-size: 0.7rem;
+        }
+        @include media-breakpoint-up(md) {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+      }
+      .btn {
+        margin-top: 20px;
+        margin-left: 30%;
+        border-radius: 0;
+        @include media-breakpoint-up(md) {
+          margin-left: 0%;
+        }
+        @include media-breakpoint-up(lg) {
+          margin-left: 55px;
+        }
+      }
+      .btn-outline-warning {
+        border: 1px solid #bcbb6c;
+        color: #bcbb6c;
+        font-family: "Source Sans Pro";
+        font-size: 1.25rem;
+        &:hover {
+          background-color: transparent;
+          color: #788d39;
+        }
+      }
+    }
+  } // END TNA FEATURED SECTION
+  // KETCHIKAN MUSEUM FEATURED SECTION
+  &__ketchikanmuseums {
+    .bg {
+      background-image: url(https://s3-us-west-2.amazonaws.com/northcreativedesign/img/museums_background.jpg);
+
+      background-size: cover;
+      height: auto;
+      margin-top: 700px;
+      @include media-breakpoint-up(md) {
+        margin-top: 100px;
+        height: 600px;
+      }
+    }
+    img {
+      padding: 0 10%;
+    }
+    @extend .index-featured__tnafitness;
+    .col-md-9 {
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      @include media-breakpoint-up(md) {
+        width: 65%;
+        margin-top: 200px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+    }
+    .col-md-3 {
+      margin-top: 70px;
+      @include media-breakpoint-only(md) {
+        padding-right: 50px;
+      }
+      h5 {
+        color: #857e83;
+      }
+    }
+  } // END KETCHIKAN MUSEUM FEATURED SECTION
+  // ISLAND TILE & MARBLE FEATURED SECTION
+  &__islandtile {
+    .col-md-8 {
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 50px;
+      @include media-breakpoint-up(md) {
+        margin-top: 100px;
+        padding-top: 0px;
+      }
+      @include media-breakpoint-up(lg) {
+        padding-left: 115px;
+      }
+    }
+    .col-md-4 {
+      margin-top: 100px;
+      @include media-breakpoint-only(md) {
+        position: relative;
+        left: 50px;
+      }
+      @include media-breakpoint-up(lg) {
+        position: relative;
+        left: 100px;
+      }
+      h5 {
+        text-align: center;
+        margin-bottom: 0px;
+        color: #60b89e;
+      }
+      h6 {
+        text-align: center;
+        margin-bottom: 10px;
+        @include media-breakpoint-only(md) {
+          margin-bottom: 0px;
+        }
+      }
+      p {
+        color: #2a2a2a;
+        font-family: "Source Sans Pro";
+        font-size: 0.875rem;
+        line-height: 1rem;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 10px;
+        &:nth-child(6) {
+          color: #60b89e;
+        }
+        &:nth-child(7) {
+          color: #676767;
+          ;
+        }
+        @include media-breakpoint-only(md) {
+          font-size: 0.7rem;
+          margin-top: 30px;
+        }
+        @include media-breakpoint-up(md) {
+          text-align: left;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+      }
+      ul {
+        margin-left: 0px;
+        padding-left: 0;
+      }
+      li {
+        font-family: "Source Sans Pro";
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding-left: 40px;
+        padding-right: 40px;
+        @include media-breakpoint-only(md) {
+          font-size: 0.7rem;
+        }
+        @include media-breakpoint-up(md) {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+      }
+      @extend .index-featured__tnafitness;
+      .btn {
+        margin-top: 20px;
+        margin-left: 30%;
+        border-radius: 0;
+        @include media-breakpoint-up(md) {
+          margin-left: 0%;
+        }
+        @include media-breakpoint-up(lg) {
+          margin-left: 55px;
+        }
+      }
+      .btn-outline-warning {
+        border: 1px solid #bcbb6c;
+        color: #bcbb6c;
+        font-family: "Source Sans Pro";
+        font-size: 1.25rem;
+        &:hover {
+          background-color: transparent;
+          color: #788d39;
+        }
+      }
+      .lower-island-text {
+        line-height: 18px;
+      }
+    }
+  } // END ISLAND TILE & MARBLE FEATURED SECTION
+}
