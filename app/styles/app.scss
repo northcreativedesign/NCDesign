@@ -159,7 +159,7 @@
         font-size : 0.8rem;
         line-height: 1.3rem;
       }
-    } // WEB DEVELOPMENT TEXT COLUMN    
+    } // WEB DEVELOPMENT TEXT COLUMN
     .webdevelop-text {
       @extend .branding-text;
       img {
@@ -540,3 +540,6 @@
     }
   } // END ISLAND TILE & MARBLE FEATURED SECTION
 }
+
+
+@import "components/services";
